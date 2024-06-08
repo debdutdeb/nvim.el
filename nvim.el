@@ -170,5 +170,11 @@
        (setq nvim--conn (nvim-connect)))
      (nvim-request nvim--conn ,(nvim--expand-method method) ',args)))
 
+(defmacro nvim-mode ()
+  `(progn
+     (nvim get-mode)))
+
+
 (provide 'nvim)
+(provide 'nvim-mode)
 ;;; nvim.el ends here
